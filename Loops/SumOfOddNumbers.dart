@@ -1,0 +1,30 @@
+import 'dart:io';
+
+/*
+  Program for printing Odd numbers from 1 to num
+ */
+void main(){
+  int num;
+  print("Enter the maximum number greater than 1 for adding all the Odd numbers in between ");
+  try{
+    num = int.parse(stdin.readLineSync() ?? "0");
+  }catch(e){
+    num = 0;
+  }
+  if(num < 1){
+    print("The maximum number entered is less the initial value 1. Hence, Sum of Odd numbers in between the range $num and 1 is not possible");
+    return;
+  }
+  else if(num == 1){
+    print("If the user input value is 1. Sum of Odd numbers with in the range is not possible");
+    return;
+  }
+  else {
+    int sum = 0;
+    for(int i=1;i<=num;i++){
+      if(i%2 != 0)
+        sum += i;
+    }
+    print("The Sum of all Odd numbers between 1 to $num is : $sum");
+  }
+}
