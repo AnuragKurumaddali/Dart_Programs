@@ -1,0 +1,7 @@
+name: UseOfHttpGet
+description: "A Dart Program to get data from Server using http.get method"
+version: 1.0.0+1
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+dependencies:
+  http: any
